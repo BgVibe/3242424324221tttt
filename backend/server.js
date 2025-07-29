@@ -1,4 +1,5 @@
-require('dotenv').config();
+require('dotenv').config();  // Load environment variables from .env file
+
 const express = require('express');
 const mongoose = require('mongoose');
 const bcrypt = require('bcrypt');
@@ -310,3 +311,18 @@ app.post('/api/admin/users/:id/badges', isAdmin, async (req, res) => {
 app.listen(PORT, () => {
   console.log(`Zentrix backend running on port ${PORT}`);
 });
+
+/*
+Make sure to:
+- Create a `.env` file in your backend root folder with:
+
+MONGO_URI=your_mongodb_connection_string
+SESSION_SECRET=your_secret_key
+
+- Add `.env` to your `.gitignore`
+
+- Create these folders so file uploads work:
+  uploads/
+  uploads/thumbnails/
+  uploads/games/
+*/
