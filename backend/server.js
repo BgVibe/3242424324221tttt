@@ -312,17 +312,6 @@ app.listen(PORT, () => {
   console.log(`Zentrix backend running on port ${PORT}`);
 });
 
-/*
-Make sure to:
-- Create a `.env` file in your backend root folder with:
-
-MONGO_URI=your_mongodb_connection_string
-SESSION_SECRET=your_secret_key
-
-- Add `.env` to your `.gitignore`
-
-- Create these folders so file uploads work:
-  uploads/
-  uploads/thumbnails/
-  uploads/games/
-*/
+app.get('/', (req, res) => {
+  res.send('Zentrix backend is running.');
+});
