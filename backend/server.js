@@ -309,3 +309,7 @@ app.post('/api/admin/users/:id/badges', isAdmin, async (req, res) => {
 app.listen(PORT, () => {
   console.log(`Zentrix backend running on port ${PORT}`);
 });
+
+app.get('/', (req, res) => {
+  res.send('Zentrix backend is running.');
+});
