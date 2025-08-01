@@ -6,7 +6,7 @@ const userSchema = new mongoose.Schema({
   avatar: { type: String, default: '' },
   isAdmin: { type: Boolean, default: false },
   badges: [{ type: String }],
-  currency: { type: Number, default: 1000 },
+  currency: { type: Number, default: 10 },
   inventory: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Item' }],
 });
 
